@@ -1,3 +1,5 @@
+package grid;
+
 import ludi.heaps.grid.*;
 import ludi.heaps.grid.Mover.MoveDirection;
 import ludi.heaps.grid.Driver.MoveRequest;

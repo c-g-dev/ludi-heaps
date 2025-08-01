@@ -7,4 +7,4 @@
 
 -hl test.hl
 
--main ./test/src/RunTests
+-main ./test/src/grid/RunTests
