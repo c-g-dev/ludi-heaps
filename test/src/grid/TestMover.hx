@@ -1,3 +1,7 @@
+package grid;
+
+
+
 import ludi.heaps.grid.Mover.GridActorMover;
 import ludi.heaps.grid.Mover.MoveTest;
 import ludi.heaps.grid.Grid;

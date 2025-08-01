@@ -1,3 +1,5 @@
+package grid;
+
 import ludi.heaps.grid.Trigger.ITrigger;
 import ludi.heaps.grid.Trigger.TriggerEvent;
 import ludi.heaps.grid.Trigger.TriggerFuture;
