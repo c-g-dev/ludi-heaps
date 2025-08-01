@@ -9,7 +9,6 @@ enum ArrowNavEvent {
     Selected;
 }
 
-
 class ArrowNav {
     var nodes: Map<Object, ArrowNavNode<Dynamic>> = new Map(); // Maps objects to their nodes
     var currentSelection: Object = null;                       // Tracks the currently selected object

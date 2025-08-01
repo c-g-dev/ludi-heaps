@@ -1,0 +1,10 @@
+-cp src
+-cp ../src
+
+-lib heaps
+-lib ludi-commons
+-lib heaps-coroutine
+
+-hl test.hl
+
+-main RunTests 

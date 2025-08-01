@@ -45,7 +45,7 @@ jobs:
         haxelib git heaps https://github.com/HeapsIO/heaps
     - name: Build tests
       run: |
-        haxe test/compile.hxml
+        haxe test/test-simple.hxml
     - name: Run tests
       run: |
-        hl test/build.hl
+        hl test/test.hl
