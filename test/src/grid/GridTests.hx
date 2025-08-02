@@ -7,9 +7,9 @@ import ludi.heaps.grid.Headless.HeadlessGridActor;
 import ludi.heaps.grid.Headless.HeadlessGridDriver;
 import ludi.heaps.grid.Headless.HeadlessGridAnimator;
 import ludi.heaps.grid.Grid.CellInfo;
-import TestTriggers.TestBlockingTrigger;
-import TestTriggers.TestDelayedTrigger;
-import TestMover.TestableHeadlessActor;
+import grid.TestTriggers.TestBlockingTrigger;
+import grid.TestTriggers.TestDelayedTrigger;
+import grid.TestMover.TestableHeadlessActor;
 
 class GridTests {
     

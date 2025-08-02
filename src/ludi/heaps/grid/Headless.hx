@@ -10,8 +10,8 @@ import ludi.heaps.grid.Actor.IGridActor;
 class HeadlessGridActor implements IGridActor {
     public var uuid(default, null): String;
     public var mover: GridActorMover;
-    public var x: Int = 0;
-    public var y: Int = 0;
+    public var x: Float = 0;
+    public var y: Float = 0;
     
     public function new(uuid: String) {
         this.uuid = uuid;
@@ -20,7 +20,7 @@ class HeadlessGridActor implements IGridActor {
         this.mover = new GridActorMover(this, animator, driver);
     }
     
-    public function updateSpritePosition(x: Int, y: Int): Void {
+    public function updateSpritePosition(x: Float, y: Float): Void {
         this.x = x;
         this.y = y;
     }

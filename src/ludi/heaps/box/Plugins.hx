@@ -202,35 +202,8 @@ class RoundedCornersPlugin extends BoxPlugin {
     private function updateMask(width:Float, height:Float) {
         maskGraphics.clear();
 
-        /*
-        var ratio = (width + (2)) / width;
-        
-        maskGraphics.beginFill(0xFFFFFF, 0.8);
-        maskGraphics.drawRoundedRect(0 - 1, 0 - 1, width + (2), height + (2), cornerRadius * ratio);
-        maskGraphics.endFill();
-        */
 
-        /*maskGraphics.beginFill(0xFFFFFF, 0.15);
-        maskGraphics.drawRoundedRect(0 - 2, 0 - 2, width + 4, height + 4, cornerRadius + 2);
-        maskGraphics.endFill();*/
-        
-       /* maskGraphics.beginFill(0xFFFFFF, 0.3);
-        maskGraphics.drawRoundedRect(0 - 1, 0 - 1, width + 2, height + 2, cornerRadius + 1);
-        maskGraphics.endFill();
-        
-        maskGraphics.beginFill(0xFFFFFF, 0.9);
-        maskGraphics.drawRoundedRect(0, 0, width, height, cornerRadius);
-        maskGraphics.endFill();
-        
-        maskGraphics.beginFill(0xFFFFFF, 1.0);
-        maskGraphics.drawRoundedRect(0 + 1, 0 + 1, width - 2, height - 2, cornerRadius - 1);
-        maskGraphics.endFill();*/
-        // End fill
-
-     /*   maskGraphics.beginFill(0xFFFFFF, 0.3);
-        maskGraphics.drawRoundedRect(0, 0, width, height, cornerRadius * 0.8);
-        maskGraphics.endFill();*/
-
+                
         maskGraphics.beginFill(0xFFFFFF, 0.6);
         maskGraphics.drawRoundedRect(0, 0, width, height, cornerRadius * 0.9);
         maskGraphics.endFill();
@@ -238,6 +211,14 @@ class RoundedCornersPlugin extends BoxPlugin {
         maskGraphics.beginFill(0xFFFFFF, 1);
         maskGraphics.drawRoundedRect(0, 0, width, height, cornerRadius * 1.1);
         maskGraphics.endFill();
+
+        /*better to do fxaa:
+
+        var fxaa =  new FXAAFilter() ;
+        fxaa.blendStrength = 3;
+        s2d.filter = fxaa;
+
+        */
 
         
         // Enable smoothing for better quality
