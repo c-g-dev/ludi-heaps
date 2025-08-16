@@ -7,6 +7,8 @@
 -lib ludi-commons
 -lib heaps-feather-icons
 -lib heaps-coroutine
+-lib heaps-coroutine
+-lib hscript
 
 
 -hl build.hl

@@ -404,13 +404,13 @@ class GridTests {
         actor.mover.updateSpritePosition(grid, new Cell(0, 0), new Cell(1, 0), 0.5);
         
         // Check interpolated position
-        assertEquals(16, actor.x, "X should be interpolated to 16 (halfway between 0 and 32)");
-        assertEquals(0, actor.y, "Y should remain 0");
+        assertEquals(16.0, actor.x, "X should be interpolated to 16 (halfway between 0 and 32)");
+        assertEquals(0.0, actor.y, "Y should remain 0");
         
         // Full movement
         actor.mover.updateSpritePosition(grid, new Cell(0, 0), new Cell(1, 0), 1.0);
-        assertEquals(32, actor.x, "X should be at full cell size (32)");
-        assertEquals(0, actor.y, "Y should remain 0");
+        assertEquals(32.0, actor.x, "X should be at full cell size (32)");
+        assertEquals(0.0, actor.y, "Y should remain 0");
     }
     
     public static function testMovementAnimation(): Void {
