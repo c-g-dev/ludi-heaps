@@ -9,10 +9,12 @@ import ludi.heaps.grid.Grid.GridContainer;
 import ludi.heaps.grid.Cell;
 import hxd.Res;
 import grid.FXAA.FXAAFilter;
+import ludi.heaps.util.RadialGradient;
 
 import h2d.Bitmap;
 import h2d.Tile;
 import ludi.heaps.effects.RoundedRectangleShader;
+import ludi.heaps.util.LinearGradient;
 
 class TestGridApp extends hxd.App {
 
@@ -55,7 +57,7 @@ class TestGridApp extends hxd.App {
         s2d.addChild(box);*/
 
 
-        var w = 240;
+      /*  var w = 240;
         var h = 120;
         bmp = new Bitmap(Tile.fromColor(0xFFFFFFFF, w, h), s2d);
 
@@ -68,13 +70,42 @@ class TestGridApp extends hxd.App {
             0xFFFFFFFF,    // border ARGB
             1.0            // AA feather (px)
         );
-        bmp.addShader(shader);
+        bmp.addShader(shader);*/
+
+      /*  var w = 240;
+        var h = 120;
+        //bmp = new h2d.Bitmap(h2d.Tile.fromColor(0xFFFFFFFF, w, h), s2d);
+        bmp = new h2d.Bitmap(h2d.Tile.fromColor(0xFFFFFFFF, w, h), s2d);
+        var myTile = hxd.Res.grid.toTile();
+
+        var texShader = new ludi.heaps.effects.RoundedRectangleTextureShader(
+            w, h,
+            16,            // corner radius (px)
+            2,             // border thickness (px)
+            0xFFFFFFFF,    // border ARGB
+            1.0            // AA feather (px)
+        );
+        texShader.setTile(myTile); // or texShader.setTexture(myTexture);
+        bmp.addShader(texShader);*/
+
+        new Bitmap(hxd.Res.grid.toTile(), s2d);
+
+        var tile = new LinearGradient(35.0, [
+            { location: 0.0, color: RGB(255,0,0), opacity: 1.0 },
+            { location: 1.0, color: RGB(0,0,255), opacity: 1.0 }
+          ]).getTile();
+
+          var rg = RadialGradient.twoColor(0xFF0000, 0x0000FF).getTile();
+          bmp = new h2d.Bitmap(rg, s2d);
+
+
     }
 
     public override function update(dt:Float) {
         //slowly zoom in on bmp
-        bmp.scaleX += 0.01;
-        bmp.scaleY += 0.01;
+       // bmp.scaleX += 0.01;
+       // bmp.scaleY += 0.01;
+        // bmp.rotation += 0.01;
     }
 
     public static function main() {
